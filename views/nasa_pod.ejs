@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head.ejs") %>
+</head>
+<body>
+    <header>
+        <h1 class="text-center bg-dark p-2 m-0 text-white"> NASA Picture of the Day</h1>
+    </header>
+    <%- include("partials/nav.ejs") %>
+
+    <%- include('partials/twoColumns.ejs', {
+        imageUrl: nasaPhoto.url,
+        title: nasaPhoto.title,
+        description: nasaPhoto.explanation
+    }) %>
+
+    <h3 id="underfunded">*** Due to the recent underfunding of NASA, pictures
+        aren't being updated as frequently. This is the photo of today,
+         exactly a year ago (<%= nasaPhoto.date %>) ***
+    </h3>
+    <footer class="m-5 text-center"> <%- include("partials/footer.ejs") %> </footer>
+</body>
+</html>

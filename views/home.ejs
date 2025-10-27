@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- we can use partials through ejs syntax to import sections of code form other places,
+     The dash is because htere is html code within the partial, so it will be applied rather than displayed -->
+    <%- include("partials/head.ejs") %>
+</head>
+
+<body>
+    <h1 class="text-center bg-dark p-2 m-0 text-white"> The Solar System </h1>
+
+    <%- include("partials/nav.ejs") %> 
+
+    <div class="text-center p-5" >
+        <img src="<%= randomImage %>" width="500">
+    </div>
+    <footer class="m-5 text-center"> <%- include("partials/footer.ejs")%> </footer>
+    
+</body>
+
+</html>

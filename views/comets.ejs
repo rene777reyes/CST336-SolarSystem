@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head.ejs") %>
+</head>
+
+<body>
+    <h1 class="text-center bg-dark p-2 m-0 text-white"> The Solar System </h1>
+    <%- include("partials/nav.ejs") %>
+
+    <%- include('partials/twoColumns.ejs', {
+        imageUrl: cometInfo.image,
+        title: "Comets",
+        description: cometInfo.def
+    }) %>
+    <hr>
+   <footer class="m-5 text-center"> <%- include("partials/footer.ejs") %> </footer>
+</body>
+
+</html>

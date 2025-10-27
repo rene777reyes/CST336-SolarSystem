@@ -1,0 +1,39 @@
+footer {
+    padding: 35px;
+    text-align: center;
+}
+
+hr {
+    background-color: chocolate;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#underfunded {
+    color: red;
+}
+
+.two-columns {
+    display: flex;
+    gap: 10px;       /* space between columns */
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+  
+.two-columns .column-image {
+    flex: 1;          /* image takes half */
+}
+  
+.two-columns .column-info {
+    flex: 1;          /* info takes half */
+}
+  
+.two-columns img {
+    width: 80%;
+    height: auto;
+    border-radius: 30px;
+}
