@@ -62,9 +62,18 @@ app.get('/comets', (req, res) => {
 //planet route (template)
 app.get('/planet', (req, res) => {
    let planet_name = req.query.planetName;
-
    let planetInfo = solarSystem[`get${planet_name}`]();
-   res.render('planetInfo.ejs', {planetInfo, planet_name})
+   console.log(planet_name);
+   //special cases for these planets because the images from npm aren't working
+   if (planet_name == "Mars") {
+      res.render('mars.ejs', {planetInfo, planet_name})
+   } else if (planet_name == "Jupiter"){
+      res.render('jupiter.ejs', {planetInfo, planet_name})
+   } else if (planet_name == "Pluto"){
+      res.render('pluto.ejs',{planetInfo, planet_name})
+   }else {
+      res.render('planetInfo.ejs', {planetInfo, planet_name})
+   }
 });
 
 app.listen(3000, () => {

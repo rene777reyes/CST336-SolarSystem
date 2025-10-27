@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head.ejs") %>
+</head>
+
+<body>
+    <h1 class="text-center bg-dark p-2 m-0 text-white"> The Solar System </h1>
+    <%- include("partials/nav.ejs") %>
+    
+    <%- include('partials/twoColumns.ejs', {
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter_OPAL_2024.png",
+        title: planet_name,
+        description: planetInfo.description
+    }) %>
+
+    <hr> <h3> Distance from the Sun: </h3>
+    <%= planetInfo.distanceFromSun %>
+    <br><br> <h3> Year length: </h3>
+    <%= planetInfo.yearLength %>
+    <br><br> <h3> One Earth Day: </h3>
+    <%= planetInfo.oneEarthDay %>
+    <br><br><h3> Radius (in miles): </h3>
+    <%= planetInfo.radius %>
+    <br><br><h3> Number of moons: </h3>
+    <%= planetInfo.moons %>
+    <br>
+   <footer class="m-5 text-center"> <%- include("partials/footer.ejs") %> </footer>
+</body>
+
+</html>
